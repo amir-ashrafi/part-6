@@ -1,8 +1,23 @@
-# React + Vite
+# Unicafe Redux
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simplified version of the Unicafe feedback app, built using Redux for state management. This project is part of the Fullstack Open 2024 course, covering exercises 6.1 and 6.2.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The application allows users to give feedback in three categories:
+- `Good`
+- `Ok`
+- `Bad`
+
+Each feedback updates a centralized Redux store. The store keeps track of the number of each type of feedback, and the UI reflects these counts.
+
+## Store State Structure
+
+The Redux store holds the following state:
+
+```js
+{
+  good: 0,
+  ok: 0,
+  bad: 0
+}
